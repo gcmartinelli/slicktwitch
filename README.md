@@ -10,9 +10,13 @@ Use at your own risk.
 
 ### Usage
 `-h | --help`												see help
+
 `-x | --nochat`												stream only mode
+
 `-n NICK | --nick=NICK`										set Twitch chat nick
+
 `-c CHANNEL | --channel=CHANNEL`							set Twitch channel name
+
 `-q QUALITY | --quality=QUALITY {best|worst|audio_only}`	set stream quality
 
 ---
