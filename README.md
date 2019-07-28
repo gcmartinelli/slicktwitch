@@ -20,6 +20,7 @@ Use at your own risk.
 ### Dependencies
 * VLC Media Player - http://www.videolan.org/vlc
 * IRSSI - https://www.irssi.org
+* streamlink - https://github.com/streamlink/streamlink
 
 ### Instalation
 1. Clone with `git clone https://github.com/gcmartinelli/slicktwitch.git`
