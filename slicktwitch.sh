@@ -150,14 +150,16 @@ fi
     
 
 # Launch programs...
+STREAMOPTS="-Q -p 'vlc --qt-minimal-view' --title '{title} - {category}'"
+
 echo "**********************************************************"
 echo "Attempting to connect to $CHANNEL... this may take a while"
 echo "**********************************************************"
 
 if [ ! -z "$NOCHAT" ]; then
-    streamlink -p "vlc --qt-minimal-view" http://twitch.tv/$CHANNEL $QUALITY
+    streamlink -p 'vlc --qt-minimal-view' --title '{title} - {category}' http://twitch.tv/$CHANNEL $QUALITY
 else
-    streamlink -Q -p "vlc --qt-minimal-view" http://twitch.tv/$CHANNEL $QUALITY &
+    streamlink -Q -p 'vlc --qt-minimal-view' --title '{title} - {category}' http://twitch.tv/$CHANNEL $QUALITY &
     echo ""
     echo ""
     echo "IRSSI will open but you will need to join the chat CHANNEL yourself."
