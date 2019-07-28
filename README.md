@@ -1,5 +1,7 @@
 # slicktwitch
 
+[!slicktwitch screenshot](https://i.imgur.com/YoUyZml.png)
+
 Simple shell script that runs VLC and IRSSI to launch a Twitch video and Twitch chat on the terminal.
 
 Only tested on Linux.
