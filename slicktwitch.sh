@@ -120,14 +120,27 @@ fi
 
 if [ -z "$NOCHAT" ]; then
     if [ -z "$NICK" ]; then
-        echo "Do you want to joing chat? If so what is your Twitch username? [Default: No]"
-        echo -n "> "
-        read NICK
-        if [ -z "$NICK" ]; then
+        echo "Do you want to joing chat?"
+		echo "1 - No"
+		echo "2 - Yes"
+        echo -n " [Default 1: No] > "
+        read CHAT
+		echo " "
+		if [ -z "$CHAT" ]; then
+			NOCHAT=1
+        elif [ "$CHAT" -eq 2 ]; then
+			NOCHAT=0
+		else
             NOCHAT=1
         fi
-    fi
-    echo " "
+		
+		if [ "$NOCHAT" -eq 0 ]; then
+			echo "What is your Twitch username?"
+			echo -n "> "
+		read NICKi
+    	fi
+	fi
+	echo " "		
 fi
 
 if [ -z "$QUALITY" ]; then
