@@ -137,7 +137,7 @@ if [ -z "$NOCHAT" ]; then
 		if [ "$NOCHAT" -eq 0 ]; then
 			echo "What is your Twitch username?"
 			echo -n "> "
-		read NICKi
+		read NICK
     	fi
 	fi
 	echo " "		
@@ -169,7 +169,7 @@ echo "**********************************************************"
 echo "Attempting to connect to $CHANNEL... this may take a while"
 echo "**********************************************************"
 
-if [ ! -z "$NOCHAT" ]; then
+if [ "$NOCHAT" -eq 1 ]; then
     streamlink -p 'vlc --qt-minimal-view' --title '{title} - {category}' http://twitch.tv/$CHANNEL $QUALITY
 else
     streamlink -Q -p 'vlc --qt-minimal-view' --title '{title} - {category}' http://twitch.tv/$CHANNEL $QUALITY &
